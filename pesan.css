@@ -1,0 +1,100 @@
+/* Untuk layar seluler */
+@media only screen and (max-width: 600px) {
+    body {
+        /* Atur overflow menjadi visible untuk memungkinkan scroll */
+        overflow: visible;
+    }
+
+    .text-container {
+        /* Atur margin top untuk memberikan jarak di atas teks */
+        margin-top: 10px;
+    }
+}
+
+/* Atur gaya default */
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    margin: auto;
+    background-image: url(https://assets.codepen.io/4927073/Group2.png), url(https://assets.codepen.io/4927073/Background6.png);
+    background-image: url(https://assets.codepen.io/4927073/Group2.png), linear-gradient(33deg, #edf2f7, #edf2f7);
+    background-image: url(https://assets.codepen.io/4927073/Group2.png),  linear-gradient(33deg, #FF8080, #FF8080);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+svg #line {
+    fill: none;
+    stroke: white;
+    stroke-width: 1.5;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+
+    stroke-opacity: 1;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dash 3s linear infinite;
+}
+
+svg #point {
+    fill: none;
+    stroke: white;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: .1;
+    stroke-opacity: 1;
+    stroke-dasharray: .0001, .9999;
+    stroke-dashoffset: 1;
+    animation: dash 3s linear infinite;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1;
+    }
+    80% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Atur posisi teks di bawah SVG */
+.text-container {
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+}
+
+.text-container p {
+    font-size: 18px;
+    color: white;
+}
+.text-container h1 {
+    font-size: 30px;
+    color: white;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* Tambahkan animasi ke elemen dengan kelas "typewriter" */
+  .typewriter {
+    overflow: hidden; /* Tetapkan overflow agar teks terpotong */
+    border-right: .15em solid #FF8080; /* Tambahkan efek "ketik" dengan border-right */
+    white-space: nowrap; /* Tetapkan agar teks tidak mematah-matah */
+    margin: 0 auto; /* Pusatkan elemen */
+    letter-spacing: .15em; /* Spasi antar huruf */
+    animation: typing 15s steps(40, end); /* Terapkan animasi */
+  }
