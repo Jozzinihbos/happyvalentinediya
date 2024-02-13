@@ -1,0 +1,132 @@
+
+html,body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    font-family: 'Great Vibes', cursive;
+}
+
+body {
+    display: flex;
+    margin: auto;
+    background-image: url(https://assets.codepen.io/4927073/Group2.png), url(https://assets.codepen.io/4927073/Background6.png);
+    background-image: url(https://assets.codepen.io/4927073/Group2.png), linear-gradient(33deg, #edf2f7, #edf2f7);
+    background-image: url(https://assets.codepen.io/4927073/Group2.png),  linear-gradient(33deg, #FF8080, #FF8080);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+svg #line {
+    fill: none;
+    stroke: white;
+    stroke-width: 1.5;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+
+    stroke-opacity: 1;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dash 3s linear infinite;
+}
+
+svg #point {
+    fill: none;
+    stroke: white;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: .1;
+    stroke-opacity: 1;
+    stroke-dasharray: .0001, .9999;
+    stroke-dashoffset: 1;
+    animation: dash 3s linear infinite;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1;
+    }
+    80% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Atur posisi teks di bawah SVG */
+.text-container {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%; /* Agar teks rata tengah */
+}
+
+.text-container p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px; /* Tambahkan margin bawah untuk jarak dengan teks berikutnya */
+}
+.text-container h1 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px; /* Tambahkan margin bawah untuk jarak dengan teks berikutnya */
+}
+/* Animasi untuk efek ketikan */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Terapkan animasi ke elemen dengan kelas "typewriter" */
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid #FF8080;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 5s steps(40, end); /* Ubah durasi animasi sesuai kebutuhan */
+}
+
+/* Animasi perubahan warna teks */
+@keyframes color-change {
+    0% { color: #FF8080; }
+    50% { color: white; }
+    100% { color: #FF8080; }
+}
+
+/* Terapkan animasi ke elemen dengan kelas "typewriter" */
+.typewriter {
+    animation: typing 5s steps(40, end) infinite, color-change 5s infinite; /* Gabungkan dua animasi */
+}
+
+audio {
+    width: 50%;
+    margin-top: 20px; /* Atur jarak dari atas */
+}
+
+/* Gaya tombol kontrol audio */
+audio::-webkit-media-controls-panel {
+    background-color: #FF8080; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    border-radius: 10px; /* Sudut border */
+    padding: 10px; /* Ruang dalam */
+}
+
+/* Gaya tombol audio */
+audio::-webkit-media-controls-play-button {
+    background-color: white; /* Warna latar belakang */
+    color: #FF8080; /* Warna ikon */
+    border-radius: 50%; /* Bentuk tombol */
+    padding: 5px; /* Ruang dalam */
+    margin: 0 10px; /* Jarak antara tombol */
+}
+/* Gaya garis durasi audio */
+* Gaya garis durasi audio */
+audio::-webkit-media-controls-timeline {
+    height: 4px; /* Tinggi garis durasi */
+    width: 20%; /* Lebar garis durasi */
+    background-color: #FF8080; /* Warna latar belakang */
+    border-radius: 2px; /* Sudut border */
+}
